@@ -2,29 +2,34 @@ body {
   background: linear-gradient(to bottom, #ccccff 0%, #666699 100%);
   display: flex;
   justify-content: center;
+  padding: 5%;
+  padding-top: unset;
+  padding-bottom: unset;
 }
 
 div {
   padding: 2%;
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 2px solid;
   border-radius: 20px;
+  background: linear-gradient(to bottom, #33ccff 0%, #99ccff 100%);
 }
 
 table {
   width: 40%;
   height: 40vh;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 table td {
   word-wrap: break-word;
   width: 50%;
   text-align: center;
-  font-size: large;
+  font-size: larger;
   background: linear-gradient(to bottom, #ffffff 0%, #ccccff 100%);
 }
 
@@ -39,8 +44,39 @@ table td {
 
 h3 {
   text-align: center;
+  text-decoration: underline;
 }
 
-hr {
-  color: black;
+h1 {
+  font-family: fantasy;
+  border: 2px solid;
+  padding: 2%;
+}
+
+
+@media screen and (min-width: 360px) {
+  body {
+   padding: unset;
+  }
+
+  table{
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  body {
+   padding: unset;
+  }
+  table{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  body {
+   padding: 5%;
+  }
+  table{
+    width: 80%;
+  }
 }

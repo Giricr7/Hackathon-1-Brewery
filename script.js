@@ -38,6 +38,11 @@ Validate = (table) => {
 
 setData = (brewdata) => {
    
+    h1 = document.createElement('h1');
+    h1.innerHTML = 'Breweries List'
+    
+    outerdiv.appendChild(h1)
+
     brewdata.map((breweries) => {
         
         
@@ -110,7 +115,6 @@ setData = (brewdata) => {
 
     async function start () {
         let brewdata = await fetchData();
-        console.log(brewdata)
         setData(brewdata);
     
     }
