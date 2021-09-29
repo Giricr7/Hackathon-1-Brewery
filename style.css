@@ -1,5 +1,7 @@
 body {
   background: linear-gradient(to bottom, #ccccff 0%, #666699 100%);
+  display: flex;
+  justify-content: center;
 }
 
 div {
