@@ -10,11 +10,15 @@ data_count=1
 var url='https://api.openbrewerydb.org/breweries'
 fetchData = async () => {
     
-    jsdata = await fetch(url);
+    try {
+        jsdata = await fetch(url);
     convertedData = await jsdata.json();
    
     
     return convertedData
+    } catch(err) {
+        console.error(err);
+    }
 }
 
 // removing the empty values from the data
@@ -127,4 +131,3 @@ setData = (brewdata) => {
 
     //program execution starts here
 start();
-
